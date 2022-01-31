@@ -13,5 +13,5 @@ FLASK_ENV=development FLASK_APP=src/application.py flask run
 2. main-styles.css
 3. api: gibt dictionary(json) zurück
 
-### Stufe 2
+### Stufe 2 
 1. für dictionary eigenen datei ablegen 
