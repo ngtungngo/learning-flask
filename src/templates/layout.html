@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='application.js')}}"></script>
     <meta charset="UTF-8">
     <title>Home page</title>
 </head>
 <body>
     <h1>Home page</h1>
     <p>This is a project of basic Flask</p>
-    <a>{</a>
+    <button id="hello">Hello</button>
+    <button onclick="doSomeThing()">do somthing</button>
 </body>
 </html>
