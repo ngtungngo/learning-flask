@@ -29,7 +29,9 @@ FLASK_ENV=development FLASK_APP=src/application.py flask run
   </head>
   <body>
     <div>
-      <h1>The Hall of Dogs</h1>
+      <h1>The gallery of dogs</h1>
+      <em>This is a Singlepage application using Flask, javascript, html and css</em>
+      <hr/>
     </div>
   </body>
 </html>
