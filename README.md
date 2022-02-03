@@ -18,3 +18,26 @@ FLASK_ENV=development FLASK_APP=src/application.py flask run
 
 ### Stufe 2
 1. für dictionary eigenen datei ablegen 
+
+### Single Page with css, javascript and template
+1. Create new Templates dogs.html
+```
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dogs</title>
+  </head>
+  <body>
+    <div>
+      <h1>The Hall of Dogs</h1>
+    </div>
+  </body>
+</html>
+
+```
+2. add new funtion to application.py
+```
+@app.route("/dogs/")
+def dogs_index():
+    return render_template('dogs.html')
+```
