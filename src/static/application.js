@@ -16,6 +16,7 @@ $(document).ready(function() {
     
 });
 
+
 async function doSomeThing() {
     console.log('some thing will be doing');
     const res = await fetch('http://127.0.0.1:5000/api/user', {
