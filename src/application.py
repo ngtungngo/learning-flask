@@ -27,3 +27,28 @@ def home():
 @app.route("/<name>")
 def test(name):
     return render_template('test.html', content=name)
+
+votes = 0
+
+@app.route("/votes/")
+def index_votes():
+    return render_template('votes.html', votes=votes)
+
+@app.route("/up", methods=["POST"])
+def upvote():
+    global votes
+    votes = votes + 1
+    return str(votes)
+
+@app.route("/down", methods=["POST"])
+def downvote():
+    global votes
+    if votes >= 1:
+        votes = votes - 1
+    return str(votes)
+
+
+@app.route("/dogs/")
+def dogs_index():
+    dogs = ['Ikarus', 'Ikaros', 'Karies', 'Sirius', 'Thanos', 'Suiris']
+    return render_template('dogs.html', dogs=dogs)
