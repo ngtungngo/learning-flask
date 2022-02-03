@@ -1,0 +1,31 @@
+body {
+    padding: 2rem;
+}
+.contaner {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cards > * {
+  margin-bottom: 1rem;
+}
+
+.cards > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+}
+
+img {
+  height: 250px;
+  width: auto;
+}

@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dogs.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='dogs.js')}}"></script>
+    <meta charset="UTF-8" />
+    <title>Dogs</title>
+  </head>
+  <body>
+    <div>
+      <h1>The Hall of Dogs</h1>
+      <div class="cards">
+        {%for dog in dogs%}
+        <div class="card">
+          <h3>{{dog}}</h3>
+          <div>
+            <img id="{{dog}}" src="https://dog.ceo/api/breeds/image/random" width="400px" alt="{{dog}}-fotos"/>
+          </div>    
+        </div>
+        {%endfor%}
+      </div>
+    </div>
+  </body>
+</html>
