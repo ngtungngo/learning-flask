@@ -1,5 +1,8 @@
 body {
-    padding: 2rem;
+    margin: 24px;
+}
+em {
+    color: #857f7f
 }
 .contaner {
   display: flex;
