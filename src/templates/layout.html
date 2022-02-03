@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-    {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{% block title %}{% endblock %} - My Webpage</title>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+<h1>
+    {% block headline %}
     {% endblock %}
-  </head>
-  <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-      {% block footer %}
-      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-      {% endblock %}
+</h1>
+<em>
+    {% block uheadline %}
+    {% endblock %}
+</em>
+<hr/>
+
+
+<div class="page-content">
+     <div class="menu">
+        <ul>
+            <li><a href="/home/">Index</a></li>
+        </ul>
     </div>
-  </body>
+    <div class="main">
+        {% block main %}
+        {% endblock %}
+    </div>
+</div>
+</body>
 </html>

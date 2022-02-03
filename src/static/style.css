@@ -9,3 +9,19 @@ div {
 .important {
     font-weight: bold;
 }
+
+
+aside {
+	color: #cccccc;
+	padding: 1em;
+	grid-column: 5/span 1;
+	grid-row: 2;
+	border-left-color: black;
+	border-left: solid;
+}
+
+
+main {
+	grid-column: 1/span 4;
+	grid-row: 2;
+}
