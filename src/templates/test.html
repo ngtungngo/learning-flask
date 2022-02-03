@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home page</title>
-</head>
-<body>
-    <h1>Home page</h1>
-    <p>{{ content }}</p>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block title %}{{ page_name }}{% endblock %}
+{% block head %}
+  {{ super() }}
+  {% endblock %}
+{% block content %}
+  <h1>{{ page_name }}</h1>
+  <p class="important">
+    Welcome on my awesome homepage.
+{% endblock %}
