@@ -116,3 +116,8 @@ def dogs_index():
 def page_with_flex():
     return render_template('layout.html')
 
+
+@app.route("/dogs_gallery/")
+def dogs_gallery():
+    dogs = ['Ikarus', 'Ikaros', 'Karies', 'Sirius', 'Thanos', 'Suiris']
+    return render_template('dogs_gallery.html', dogs=dogs)

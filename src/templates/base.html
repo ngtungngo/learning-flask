@@ -1,0 +1,23 @@
+{# This is templates/base.html template #}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Default Title{% endblock %}</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tung und Sohn App</h1>
+      <em>This is a Singlepage application using Flask, javascript, html and css</em>
+      <hr/>
+    </div>
+    {# including the navigation bar from nav.html #}
+    {% include 'navigation.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>

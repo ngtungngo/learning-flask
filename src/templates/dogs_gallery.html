@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="cards">
+    {%for dog in dogs%}
+    <div class="card">
+      <h3>{{dog}}</h3>
+      <div>
+        <img id="{{dog}}" src="https://dog.ceo/api/breeds/image/random" width="400px" alt="{{dog}}-fotos"/>
+      </div>    
+    </div>
+    {%endfor%}
+</div>
+{% endblock %}
