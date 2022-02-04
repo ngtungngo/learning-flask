@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-from flask import Flask, render_template
 from flask_cors import CORS, cross_origin
-=======
 from flask import Flask, render_template, jsonify
->>>>>>> b55df91b946debe3b9358a6c8e3cf814eb8ff6d3
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
