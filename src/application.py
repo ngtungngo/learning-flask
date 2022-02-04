@@ -21,10 +21,10 @@ def api():
 
 @app.route("/home/")
 def home():
-    return render_template('layout.html')
+    return render_template('index.html')
 
 
-@app.route("/<page_name>")
+@app.route("/<page_name>/")
 def test(page_name):
     return render_template('test.html', page_name=page_name)
 
@@ -32,31 +32,32 @@ def test(page_name):
 @app.route("/users/", methods=['GET'])
 def user():
     users = [
-    {
-      "firstname": "Kevin",
-      "surname": "Ngo",
-      "birthday": "15.09.2021"
-    },
-    {
-      "firstname": "Franz",
-      "surname": "Friedrich",
-      "birthday": "28.12.2021"
-    },
-    {
-      "firstname": "Hans",
-      "surname": "Walter",
-      "birthday": "10.04.2022"
-    },
-    {
-      "firstname": "Peter",
-      "surname": "Ulrich",
-      "birthday": "08.02.2020"
-    },
-    {
-      "firstname": "Frieda",
-      "surname": "Barin",
-      "birthday": "01.02.2018"
-    }]
+        {
+          "firstname": "Kevin",
+          "surname": "Ngo",
+          "birthday": "15.09.2021"
+        },
+        {
+          "firstname": "Franz",
+          "surname": "Friedrich",
+          "birthday": "28.12.2021"
+        },
+        {
+          "firstname": "Hans",
+          "surname": "Walter",
+          "birthday": "10.04.2022"
+        },
+        {
+          "firstname": "Peter",
+          "surname": "Ulrich",
+          "birthday": "08.02.2020"
+        },
+        {
+          "firstname": "Frieda",
+          "surname": "Barin",
+          "birthday": "01.02.2018"
+        }
+    ]
     return jsonify(users)
 
 
@@ -110,3 +111,8 @@ def downvote():
 def dogs_index():
     dogs = ['Ikarus', 'Ikaros', 'Karies', 'Sirius', 'Thanos', 'Suiris']
     return render_template('dogs.html', dogs=dogs)
+
+@app.route("/layout/")
+def page_with_flex():
+    return render_template('layout.html')
+
