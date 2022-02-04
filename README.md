@@ -6,6 +6,8 @@ First looks into Flask
 FLASK_ENV=development FLASK_APP=src/application.py flask run
 
 ```
+## Jinja-template
+https://overiq.com/flask-101/basics-of-jinja-template-language/
 
 ##TODO
 ### Basis
