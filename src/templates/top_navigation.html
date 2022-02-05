@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div class="navbar">
   <nav>
-    <a href="/gallery/dogs">Dogs</a>
-    <a href="/gallery/cats">Cats</a>
+    <a href="/gallery/dogs" {% if data.animal == "dogs" %}class="active"{% endif%}>Dogs</a>
+    <a href="/gallery/cats" {% if data.animal == "cats" %}class="active"{% endif%}>Cats</a>
   </nav>
 </div>
