@@ -1,13 +1,15 @@
-{% extends "layout.html" %}
+{% extends "main_page.html" %}
 {% block title %}
 Home
 {% endblock %}
 {% block headline %}
-  {{ super() }}
-<h1>Home</h1>
+Home
 {% endblock %}
-{% block main %}
-  <h5>List of all pages:</h5>
+{% block content %}
+  <h5>Some pages:</h5>
+  <ul>
+    <li><a href="/dogs/">Dog pictures</a></li>
+  </ul>
 {% endblock %}
 {% block nav %}
 

@@ -90,3 +90,12 @@ def cars():
 def page_with_flex():
     return render_template('layout.html')
 
+
+@app.route("/dogs/")
+def dogs():
+    return render_template('dogs.html')
+
+
+@app.route("/main_page/")
+def main_page():
+    return render_template('main_page.html')
