@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="main-container">
 <div class="cards">
     {%for name in data.names%}
     <div class="card">
@@ -9,5 +10,6 @@
       </div>    
     </div>
     {%endfor%}
+</div>
 </div>
 {% endblock %}
