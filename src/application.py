@@ -121,19 +121,3 @@ def page_with_flex():
 def dogs_gallery():
     dogs = ['Ikarus', 'Ikaros', 'Karies', 'Sirius', 'Thanos', 'Suiris']
     return render_template('dogs_gallery.html', dogs=dogs)
-
-@app.route("/gallery/<animal>")
-def gallery(animal):
-    
-    if animal is 'dogs':
-        url = 'https://dog.ceo/api/breeds/image/random'
-    else:
-        url = 'https://cat.ceo/api/breeds/image/random'
-        
-    content = {
-        'animal': animal,
-        'url': url,
-        'names': ['Ikarus', 'Ikaros', 'Karies', 'Sirius', 'Thanos', 'Suiris']    
-    }
-    
-    return render_template('gallery.html', data=content)
