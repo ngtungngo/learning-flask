@@ -80,3 +80,10 @@ em {
 ```
 4. Browser aktuallisieren
 ![css-added](./resources/app-with-css.png)
+
+# create dependency file
+```
+pip freeze > requirements.txt
+```
+## Install on Heroku
+https://stackabuse.com/deploying-a-flask-application-to-heroku/
