@@ -24,7 +24,7 @@ async def gallery(animal):
     content = {
         'animal': animal,
         'page_title': page_title,
-        'numbers': numbers,
+        'numberspython wsgi.py': numbers,
         'names': [names.get_first_name(n) for n in range(numbers)]
     }
     
