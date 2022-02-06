@@ -13,7 +13,7 @@ def hello():
     return redirect("/gallery/dogs", code=302)
 
 @app.route("/gallery/<animal>")
-async def gallery(animal):
+def gallery(animal):
     if escape(animal) == 'dogs':
         page_title = "Dog's gallery"
     else:
