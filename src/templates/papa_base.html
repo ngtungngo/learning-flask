@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='task_bar.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     {% if data.animal == "dogs" %}
     <script src="{{url_for('static', filename='dogs.js')}}"></script>
@@ -12,13 +13,23 @@
     <title>{% block title %}Default Title{% endblock %}</title>
   </head>
   <body>
+    {% include 'task_bar.html' %}
     {# including the navigation bar from nav.html #}
     {% include 'top_navigation.html' %}
 
     <div class="headline">
-      <div>
+      <div class="title_line">
         <h3>{{data.page_title}}</h3>
-        <div><label></label>Number: <input value="number" name="number"/></div>
+        <form action="{{ url_for('gallery_submit', animal=data.animal) }}" method="post">
+          <label>Number of animals</label> 
+          <select id="numbers" name="numbers">
+            <option value="4" {%if data.numbers == 4%}selected="selected"{%endif%}>4</option>
+            <option value="8" {%if data.numbers == 8%}selected="selected"{%endif%}>8</option>
+            <option value="12" {%if data.numbers == 12%}selected="selected"{%endif%}>12</option>
+            <option value="16" {%if data.numbers == 18%}selected="selected"{%endif%}>16</option>
+          </select>
+          <input type="submit" id="submit" class="button"/>
+        </form>
       </div>
       <em>This is a Singlepage application using Flask, javascript, html and css.</em>
     </div>

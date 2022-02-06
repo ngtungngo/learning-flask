@@ -8,7 +8,7 @@ em {
 .headline {
   display: flex;
   flex-direction: column;
-  padding: 0 16px 0 16px;
+  padding: 0 32px 0 32\px;
 }
 
 .main-container {
@@ -70,5 +70,52 @@ nav > a:hover {
 }
 
 nav > a.active {
-  background-color: #C6E4FF;
+  background-color: #c6e4ff;
+}
+
+.title_line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input,
+select {
+  margin: 0 12px 0 12px;
+  height: 42px;
+  min-width: 64px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.button {
+  padding: 0 16px 0 16px;
+  background-color: #0D6FE8;
+  color: #FFFFFF;
+  font-weight: 400;
+  border: none;
+  box-shadow: rgb(0 0 0 / 24%) 0px 4px 8px;
+}
+
+.button:hover {
+  background-color: #1B3DB6;
+}
+
+.button:active  {
+  background-color: #063774;
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
