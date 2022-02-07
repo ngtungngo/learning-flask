@@ -24,7 +24,7 @@ def gallery(animal):
     content = {
         'animal': animal,
         'page_title': page_title,
-        'numberspython wsgi.py': numbers,
+        'numbers': numbers,
         'names': [names.get_first_name(n) for n in range(numbers)]
     }
     
