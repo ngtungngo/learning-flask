@@ -1,12 +1,11 @@
 .task-bar{
-    height: 15%;
     width: 100%;
     padding: 3px;
     padding-left: 10px;
     box-shadow: rgba(0, 0, 0, 24%) 3px 3px 10px;
     flex-direction: row;
     display: flex;
-    max-height: 60px;
+    max-height: 42px;
     background: #ffffff;
 }
 

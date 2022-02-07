@@ -28,7 +28,7 @@ def gallery(animal):
         'names': [names.get_first_name(n) for n in range(numbers)]
     }
     
-    return render_template('gallery.html', data=content)
+    return render_template('main/main.html', data=content)
 
 @app.route("/gallery/<animal>", methods=['POST'])
 def gallery_submit(animal):

@@ -117,3 +117,8 @@ Werkzeug==2.0.2
 web: gunicorn wsgi:app
 ```
 ### URL: https://demo-flask-learning.herokuapp.com/gallery/dogs
+
+
+### Trick und Tip:
+
+Arbeit mit fremde Bilder: https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit

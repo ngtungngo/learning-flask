@@ -10,12 +10,12 @@
     <script src="{{url_for('static', filename='cats.js')}}"></script>
     {% endif %}
     <meta charset="UTF-8" />
-    <title>{% block title %}Default Title{% endblock %}</title>
+    <title>{% block title %}Gallery of some animals{% endblock %}</title>
   </head>
   <body>
     {% include 'task_bar.html' %}
     {# including the navigation bar from nav.html #}
-    {% include 'top_navigation.html' %}
+    {% include 'main/top_navigation.html' %}
 
     <div class="headline">
       <div class="title_line">
