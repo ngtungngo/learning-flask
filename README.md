@@ -11,7 +11,6 @@ https://overiq.com/flask-101/basics-of-jinja-template-language/
 
 ##TODO
 ### Basis
-<<<<<<< HEAD
 1. template einbinden
 2. main-styles.css
 3. api: gibt dictionary(json) zurück  
@@ -85,5 +84,36 @@ em {
 ```
 pip freeze > requirements.txt
 ```
-## Install on Heroku
-https://stackabuse.com/deploying-a-flask-application-to-heroku/
+## Auf Heroku hosten
+siehe https://stackabuse.com/deploying-a-flask-application-to-heroku/
+1. erstelle neuen Python Daten auf Projekt-Root wsgi.py:
+```
+from src.main import *
+if __name__ == "__main__":
+  app.run()
+```
+2. installiere  gunicorn
+```
+pip install gunicorn
+```
+3. erstelle requirements.txt
+```
+pip freeze > requirements.txt
+```
+für Flask benötigte Libraries sieht so aus:
+```
+click==8.0.3
+Flask==2.0.2
+Flask-Cors==3.0.10
+gunicorn==20.1.0
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+names==0.3.0
+Werkzeug==2.0.2
+```
+4. Erstelle Profile
+```
+web: gunicorn wsgi:app
+```
+### URL: https://demo-flask-learning.herokuapp.com/gallery/dogs
